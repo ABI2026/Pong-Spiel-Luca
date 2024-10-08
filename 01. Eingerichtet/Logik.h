@@ -23,5 +23,8 @@ public:
     void kollisionFenster();
     void kollisionSpieler();
     void punktestand();
+    void tastatur();
+    void lebensstand();
+    void updateLeben();
 };
 

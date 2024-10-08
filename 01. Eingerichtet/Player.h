@@ -11,6 +11,8 @@ public:
 	void zeichnePlayer();
 	sf::Vector2f getPosition();
 	sf::Vector2f getSize();
+	void move(float x, float y);
+	sf::RectangleShape getPlayer();
 
 };
 

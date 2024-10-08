@@ -16,3 +16,13 @@ sf::Vector2f Player::getSize()
 {
     return player.getSize();
 }
+
+void Player::move(float x, float y)
+{
+    player.move(x, y);
+}
+
+sf::RectangleShape Player::getPlayer()
+{
+    return player;
+}

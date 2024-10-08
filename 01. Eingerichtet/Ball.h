@@ -18,5 +18,7 @@ public:
 	int getSpeed();
 	sf::FloatRect getGloubalBounds();
 	void setPosition(float x, float y);
+	void move(float x, float y);
+	sf::Sprite getSprite();
 };
 

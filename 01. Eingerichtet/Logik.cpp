@@ -18,6 +18,7 @@ void Logik::kollisionFenster()
     sf::Vector2f playerPos = player.getPosition();
     sf::Vector2f ballPos = ball.getPosition();
 
+    ball.move(mx, my);
     // Kollision mit den Fenstergrenzen
     if (ballPos.x <= 0)
     {
@@ -75,4 +76,45 @@ void Logik::punktestand()
 {
     
     schrift.label(score);
+}
+
+void Logik::tastatur()
+{
+    sf::Vector2f ballPos = ball.getPosition();
+    sf::Vector2f playerPos = player.getPosition();
+
+    // Tastatur auslesen
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+        my = ball.getSpeed();
+        mx = ball.getSpeed();
+    }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+        if (playerPos.x > 0) // Bildbegrenzung nach links
+        {
+            player.move(-ball.getSpeed(), 0); // y-Achse == 0
+        }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        if (playerPos.x < 300 - player.getSize().x) // Bildbegrenzung nach rechts
+        {
+            player.move(ball.getSpeed(), 0); // y-Achse == 0
+        }
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) // Neu
+    {
+        engine.getWindow().close();
+    }
+
+
+}
+
+void Logik::lebensstand()
+{
+    schrift.healthAnzeige(health);
+}
+
+void Logik::updateLeben()
+{
+    schrift.updateHealth(health);
 }

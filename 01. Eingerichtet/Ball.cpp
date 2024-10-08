@@ -23,6 +23,7 @@ void Ball::zeichneBall()
     ball.setTexture(ballTexture);
     ball.setPosition(145, 100);
     ball.setScale(0.08f, 0.08f);
+
 }
 
 sf::Vector2f Ball::getPosition()
@@ -43,4 +44,14 @@ sf::FloatRect Ball::getGloubalBounds()
 void Ball::setPosition(float x, float y)
 {
     ball.setPosition(x, y);
+}
+
+void Ball::move(float x, float y)
+{
+    ball.move(x, y);
+}
+
+sf::Sprite Ball::getSprite()
+{
+    return ball;
 }
