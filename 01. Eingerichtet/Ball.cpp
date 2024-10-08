@@ -2,9 +2,7 @@
 
 Ball::Ball()
 {
-    ball.setTexture(ballTexture);
-    ball.setPosition(145, 100);
-    ball.setScale(0.08f, 0.08f);
+    zeichneBall();
     speed = 3;
 }
 

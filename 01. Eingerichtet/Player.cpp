@@ -1,5 +1,10 @@
 #include "Player.h"
 
+Player::Player()
+{
+    zeichnePlayer();
+}
+
 void Player::zeichnePlayer()
 {
     player.setSize(sf::Vector2f(40, 10));

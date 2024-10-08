@@ -8,6 +8,7 @@ private:
 	sf::RectangleShape player;
 
 public:
+	Player();
 	void zeichnePlayer();
 	sf::Vector2f getPosition();
 	sf::Vector2f getSize();

@@ -11,7 +11,11 @@ using namespace std;
 
 
 Logik::Logik(Ball& b, Player& p, Engine& e, Schrift& s) 
-    : ball(b), player(p), engine(e), schrift(s) {}
+    : ball(b), player(p), engine(e), schrift(s) 
+{
+    score = 0;
+    health = 3;
+}
 
 void Logik::kollisionFenster()
 {
