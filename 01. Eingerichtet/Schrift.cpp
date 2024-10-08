@@ -10,13 +10,14 @@ void Schrift::label(int score)
 	text.setFont(font);
 	text.setCharacterSize(30);
 	text.setString(std::to_string(score));
+	text.setPosition(10, 10);
 }
 
 void Schrift::healthAnzeige(int health)
 {
 	healthText.setFont(font);
 	healthText.setCharacterSize(30);
-	healthText.setPosition(0, 40);
+	healthText.setPosition(10, 40);
 	healthText.setString("Health: " + std::to_string(health));
 }
 

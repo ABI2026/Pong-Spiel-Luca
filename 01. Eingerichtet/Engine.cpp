@@ -32,7 +32,8 @@ void Engine::pollEvent()
 
 	while(meinSpieleFenster.pollEvent(event))
 	{
-	
+		if (event.type == sf::Event::Closed)
+			meinSpieleFenster.close();
 	}
 }
 

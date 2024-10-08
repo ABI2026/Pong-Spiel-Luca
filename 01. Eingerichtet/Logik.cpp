@@ -15,6 +15,8 @@ Logik::Logik(Ball& b, Player& p, Engine& e, Schrift& s)
 {
     score = 0;
     health = 3;
+    mx = 0;
+    my = 0;
 }
 
 void Logik::kollisionFenster()

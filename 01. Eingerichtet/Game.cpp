@@ -11,6 +11,8 @@ void Game::run()
 
 	while(engine.isOpen())
 	{
+		engine.pollEvent();
+
 		logik.kollisionFenster();
 		logik.kollisionSpieler();
 		logik.tastatur();
