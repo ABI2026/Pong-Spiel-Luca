@@ -9,6 +9,8 @@ private:
 
 public:
 	void zeichnePlayer();
-	void getPosition();
+	sf::Vector2f getPosition();
+	sf::Vector2f getSize();
+
 };
 

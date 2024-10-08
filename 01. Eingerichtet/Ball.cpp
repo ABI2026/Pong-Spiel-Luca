@@ -2,6 +2,10 @@
 
 Ball::Ball()
 {
+    ball.setTexture(ballTexture);
+    ball.setPosition(145, 100);
+    ball.setScale(0.08f, 0.08f);
+    speed = 3;
 }
 
 Ball::~Ball()
@@ -21,7 +25,22 @@ void Ball::zeichneBall()
     ball.setScale(0.08f, 0.08f);
 }
 
-void Ball::getPosition()
+sf::Vector2f Ball::getPosition()
 {
-    ball.getPosition();
+    return ball.getPosition();
+}
+
+int Ball::getSpeed()
+{
+    return speed;
+}
+
+sf::FloatRect Ball::getGloubalBounds()
+{
+    return ball.getGlobalBounds();
+}
+
+void Ball::setPosition(float x, float y)
+{
+    ball.setPosition(x, y);
 }

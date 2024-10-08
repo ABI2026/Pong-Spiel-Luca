@@ -14,6 +14,9 @@ public:
 	~Ball(); //falls ich Plane bestimmte Bälle später zu löschen
 
 	void zeichneBall();
-	void getPosition();
+	sf::Vector2f getPosition();
+	int getSpeed();
+	sf::FloatRect getGloubalBounds();
+	void setPosition(float x, float y);
 };
 

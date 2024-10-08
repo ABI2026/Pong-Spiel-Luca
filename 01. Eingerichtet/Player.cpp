@@ -7,7 +7,12 @@ void Player::zeichnePlayer()
     player.setFillColor(sf::Color::Red);
 }
 
-void Player::getPosition()
+sf::Vector2f Player::getPosition()
 {
-    player.getPosition();
+    return player.getPosition();
+}
+
+sf::Vector2f Player::getSize()
+{
+    return player.getSize();
 }

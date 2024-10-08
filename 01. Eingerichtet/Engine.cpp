@@ -8,7 +8,7 @@ void Engine::erstelleFenster()
 
 bool Engine::isOpen()
 {
-	meinSpieleFenster.isOpen();
+	return meinSpieleFenster.isOpen();
 }
 
 void Engine::clear()
